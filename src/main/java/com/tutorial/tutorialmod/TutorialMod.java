@@ -1,6 +1,8 @@
 package com.tutorial.tutorialmod;
 
 import com.tutorial.tutorialmod.util.RegistryHandler;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -16,6 +18,13 @@ public class TutorialMod
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "tutorial";
+    public static final ItemGroup TAB = new ItemGroup("tutorial_tab")
+    {
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(RegistryHandler.RUBY.get());
+        }
+    };
 
     public TutorialMod()
     {
