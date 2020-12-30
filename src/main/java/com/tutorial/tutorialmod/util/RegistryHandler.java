@@ -1,12 +1,14 @@
 package com.tutorial.tutorialmod.util;
 
 import com.tutorial.tutorialmod.TutorialMod;
+import com.tutorial.tutorialmod.armor.ModArmorMaterial;
 import com.tutorial.tutorialmod.blocks.BlockItemBase;
 import com.tutorial.tutorialmod.blocks.RubyBlock;
 import com.tutorial.tutorialmod.blocks.RubyOre;
 import com.tutorial.tutorialmod.items.ItemBase;
 import com.tutorial.tutorialmod.tools.ModItemTier;
 import net.minecraft.block.Block;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -38,6 +40,16 @@ public class RegistryHandler
             new AxeItem(ModItemTier.RUBY, 5, -3.1f, new Item.Properties().group(TutorialMod.TAB)));
     public static final RegistryObject<HoeItem> RUBY_HOE = ITEMS.register("ruby_hoe", () ->
             new HoeItem(ModItemTier.RUBY, 0, -1.8f, new Item.Properties().group(TutorialMod.TAB)));
+
+    // Armor
+    public static final RegistryObject<ArmorItem> RUBY_HELMET = ITEMS.register("ruby_helmet", () ->
+            new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.HEAD, new Item.Properties().group(TutorialMod.TAB)));
+    public static final RegistryObject<ArmorItem> RUBY_CHESTPLATE = ITEMS.register("ruby_chestplate", () ->
+            new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.CHEST, new Item.Properties().group(TutorialMod.TAB)));
+    public static final RegistryObject<ArmorItem> RUBY_LEGGINGS = ITEMS.register("ruby_leggings", () ->
+            new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.LEGS, new Item.Properties().group(TutorialMod.TAB)));
+    public static final RegistryObject<ArmorItem> RUBY_BOOTS = ITEMS.register("ruby_boots", () ->
+            new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.FEET, new Item.Properties().group(TutorialMod.TAB)));
 
     private RegistryHandler()
     {

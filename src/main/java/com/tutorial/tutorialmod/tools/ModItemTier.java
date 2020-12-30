@@ -9,7 +9,7 @@ import java.util.function.Supplier;
 public enum ModItemTier implements IItemTier
 {
     RUBY(3, 800, 7, 3, 12,
-            () -> Ingredient.fromItems(RegistryHandler.RUBY_SWORD.get()));
+            () -> Ingredient.fromItems(RegistryHandler.RUBY.get()));
 
     private final int harvestLevel;
     private final int maxUses;
