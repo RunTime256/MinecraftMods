@@ -1,6 +1,7 @@
 package com.tutorial.tutorialmod;
 
 import com.tutorial.tutorialmod.util.RegistryHandler;
+import com.tutorial.tutorialmod.world.gen.ModOreGen;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -41,7 +42,7 @@ public class TutorialMod
 
     private void setup(final FMLCommonSetupEvent event)
     {
-
+        ModOreGen.registerOre();
     }
 
     private void doClientStuff(final FMLClientSetupEvent event)
